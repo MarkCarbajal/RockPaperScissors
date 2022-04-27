@@ -5,8 +5,10 @@ print("Winning Rules of the Rock paper scissor game as follows: \n"
                                 +"Rock vs paper->paper wins \n"
                                 + "Rock vs scissor->Rock wins \n"
                                 +"paper vs scissor->scissor wins \n")
- 
-while True:
+
+Stop_play = False 
+
+while Stop_play is False:
     print("Enter choice \n 1 for Rock, \n 2 for paper, and \n 3 for scissor \n")
      
     # take the input from user
@@ -73,6 +75,12 @@ while True:
  
  
     # if user input n or N then condition is True
+    print("\n")
+    play_again = input("Would you like to play again? [Y/N]")
+    if play_again == "Y" or play_again == "y":
+        Stop_play = False
+    if play_again == "N" or play_again == "n":
+        Stop_play = True
 
      
 # after coming out of the while loop
