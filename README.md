@@ -8,6 +8,8 @@ Fork the repository and clone it onto your desktop or preffered file storage are
 
 ## Usage
 
+To runthe build, use
+
 ```bash
 python main.py
 
