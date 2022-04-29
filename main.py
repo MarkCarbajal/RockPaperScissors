@@ -54,25 +54,47 @@ while Stop_play is False:
     
     #print the computers choice, following by
     #your choice and your opponent(the computers) choice
-         
  
-    # condition for winning
-    if((choice == 1 and comp_choice == 2) or
-      (choice == 2 and comp_choice ==1 )):
-        print("paper wins => ", end = "")
+    # condition for USER winning
+    if (choice == 2 and comp_choice == 1):  # Paper beats rock
+        # print("paper wins => ", end = "")
         result = "paper"
+        winner = "user"
          
-    elif((choice == 1 and comp_choice == 3) or
-        (choice == 3 and comp_choice == 1)):
-        print("Rock wins =>", end = "")
-        result = "Rock"
-    else:
-        print("scissor wins =>", end = "")
+    elif(choice == 1 and comp_choice == 3): # Rock beats scissors
+        # print("rock wins =>", end = "")
+        result = "rock"
+        winner = "user"
+    elif(choice == 3 and comp_choice == 2): # Scissor beats paper
+        # print("scissor wins =>", end = "")
         result = "scissor"
+        winner = "user"
  
-    # Printing either user or computer wins
+    # condition for COMPUTER winning
+    if (comp_choice == 2 and choice == 1):  # Paper beats rock
+        # print("paper wins => ", end = "")
+        result = "paper"
+        winner = "computer"
+    elif(comp_choice == 1 and choice == 3): # Rock beats scissors
+        # print("rock wins =>", end = "")
+        result = "Rock"
+        winner = "computer"
+    elif(comp_choice == 3 and choice == 2): # Scissor beats rock
+        # print("scissor wins =>", end = "")
+        result = "scissor"
+        winner = "computer"
+    
+    # Condition for a DRAW
+    if (choice == comp_choice):
+        winner = "draw"
 
- 
+    # Printing either user or computer wins
+    if (winner == "user"):
+        print("Congratulations! You won!")
+    elif (winner == "computer"):
+        print("Sorry, you lost. Computer won. Better luck next time :(")
+    else:
+        print("It's a draw!")
  
     # if user input n or N then condition is True
     print("\n")

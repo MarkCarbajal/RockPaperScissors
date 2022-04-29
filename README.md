@@ -1,4 +1,4 @@
-# Rock Paper Sissors
+# Rock Paper Scissors
 
 A simple python rock papers sissors game using python's random library.
 
@@ -19,5 +19,6 @@ python3 main.py
 ```
 
 ## Contributing
+
 Claim an open issue in the issues tab, once the task is done please open a pull request and mention the issue fixed
 in its description.
