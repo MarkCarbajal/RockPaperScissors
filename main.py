@@ -89,6 +89,8 @@ while Stop_play is False:
         winner = "draw"
 
     # Printing either user or computer wins
+    print(f'You chose {choice_name}...')
+    print(f'The computer chose {comp_choice_name}...')
     if (winner == "user"):
         print("Congratulations! You won!")
     elif (winner == "computer"):
